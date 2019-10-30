@@ -28,7 +28,7 @@ class Profile extends Component {
         skills: ['Python', 'Ruby', 'Critical Thinking', 'Analytical Skills', 'Microsoft Office', 'Multi Tasking', 'Stakeholder Communication'],
         mobile: '0412 345 678',
         linkedIn: 'www.linkedin.com/in/billmurray',
-        image: 'http://www.fillmurray.com/300/300'
+        image: '/billmurray.jpeg'
       },
       errorMessage: '',
       // dummy userEmail
@@ -70,13 +70,10 @@ class Profile extends Component {
   render(){
     return(
 
-      // let leftCol = this.state.userProfile.skills.slice(0,6);
-      // let rightCol = this.state.userProfile.skills.slice(6);
-
       <Container>
         <Row className="avatar">
           <div className='avatar-subcontainer'>
-            <Image className='avatar-image'src={this.state.userProfile.image} roundedCircle />
+            <Image className='avatar-image'src={process.env.PUBLIC_URL + this.state.userProfile.image} roundedCircle />
           </div>
           <div className='avatar-subcontainer'>
             <h3>{this.state.userProfile.name}</h3>
@@ -92,52 +89,54 @@ class Profile extends Component {
             <p> loading... </p>
             :
             <Row>
-              <Col className="skills" lg={8}>
-                <Row className="skills-title">
-                  <h4 style={{margin:'.5rem'}}>Skills</h4>
-                </Row>
-                <Row style={{margin:'1rem'}}>
-                  <ul>
-                    {
-                    this.state.userProfile.skills.map( skill => (
-                      <li>{skill}</li>
-                    ))
-                    }
-                  </ul>
-                </Row>
-              </Col>
-              <Col className="contact" lg={4}>
-                <Row className="contact-title">
-                  <h4 style={{margin:'.5rem'}}>Contact</h4>
-                </Row>
-                <Row className="contact-item">
-                  <img
-                    src="https://img.icons8.com/metro/52/000000/filled-message.png"
-                    style={{height: '30px', width: '30px'}}
-                  />
-                  <div className="contact-text">{this.state.userEmail}</div>
-                </Row>
-                <Row className="contact-item">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/phone.png"
-                    style={{height: '30px', width: '30px'}}
-                  />
-                  <div className="contact-text">{this.state.userProfile.mobile}</div>
-                </Row>
-                <Row className="contact-item">
-                  <img
-                    src="https://img.icons8.com/metro/52/000000/linkedin.png"
-                    style={{height: '30px', width: '30px'}}
-                  />
-                  <div className="contact-text">{this.state.userProfile.linkedIn}</div>
-                </Row>
-              </Col>
-            </Row>
+            <Col className="skills" lg={8}>
+              <Row className="skills-title">
+                <h4 style={{margin:'.5rem'}}>Skills</h4>
+              </Row>
+              <Row style={{margin:'1rem'}}>
+                <ul>
+                  {
+                  this.state.userProfile.skills.map( skill => (
+                    <li>{skill}</li>
+                  ))
+                  }
+                </ul>
+              </Row>
+            </Col>
+            <Col className="contact" lg={4}>
+              <Row className="contact-title">
+                <h4 style={{margin:'.5rem'}}>Contact</h4>
+              </Row>
+              <Row className="contact-item">
+                <img
+                  src="https://img.icons8.com/metro/52/000000/filled-message.png"
+                  style={{height: '30px', width: '30px'}}
+                />
+                <div className="contact-text">{this.state.userEmail}</div>
+              </Row>
+              <Row className="contact-item">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/000000/phone.png"
+                  style={{height: '30px', width: '30px'}}
+                />
+                <div className="contact-text">{this.state.userProfile.mobile}</div>
+              </Row>
+              <Row className="contact-item">
+                <img
+                  src="https://img.icons8.com/metro/52/000000/linkedin.png"
+                  style={{height: '30px', width: '30px'}}
+                />
+                <div className="contact-text">{this.state.userProfile.linkedIn}</div>
+              </Row>
+
+            </Col>
+          </Row>
           }
         </div>
       </Container>
     );
   }
+
 }
 
 export default Profile;
