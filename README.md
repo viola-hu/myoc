@@ -1,6 +1,6 @@
 # MYOB HackDays 2019 (5-6 Sep, Sydney)
 
-## What we tried to solve?
+## What did we try to solve?
 According to a MYOB internal survey, employees complained that they didn't have enough resources to see a clear career path inside the company. In order to enhance MYOB employees' awareness of internal job opportunities and provide them with the knowledge about how to upskill, our team designed an app called 'MYOC'(Mind Your Own Career) which ideally can be integrated into MYOB's exisiting employee system.
 
 ## What's the solution?
