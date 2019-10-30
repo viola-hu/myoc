@@ -40,3 +40,5 @@ or
 ```
 yarn start
 ```
+## Figma Prototype:
+Link: https://www.figma.com/file/BHZo4v0LrymWQ1D0cRt74P/MYOC?node-id=0%3A1
