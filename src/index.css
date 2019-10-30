@@ -72,21 +72,36 @@ code {
   max-width: 60%;
 }
 
-.contact-title, .skills-title{
+.contact-title{
+  border: 1px solid rgb(230, 223, 224);
+}
+
+.skills-title{
   border-bottom: 1px solid rgb(230, 223, 224);
 }
 
-
 .contact{
   margin: 1rem;
-  border: 1px solid rgb(230, 223, 224);
   max-width: 40%;
 }
 
 .contact-item{
   padding:0.5rem;
+  border-bottom: 1px solid rgb(230, 223, 224);
+  border-left: 1px solid rgb(230, 223, 224);
+  border-right: 1px solid rgb(230, 223, 224);
+}
+
+.contact-item-middle{
+  padding:0.5rem;
+  border-left: 1px solid rgb(230, 223, 224);
+  border-right: 1px solid rgb(230, 223, 224);
 }
 
 .contact-text{
   padding: 0 0 0 1rem;
+}
+
+.empty-row{
+  height: 2rem;
 }

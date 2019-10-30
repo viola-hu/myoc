@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 
 class Profile extends Component {
@@ -79,7 +80,9 @@ class Profile extends Component {
             <Image className='avatar-image'src={process.env.PUBLIC_URL + this.state.userProfile.image} roundedCircle />
           </div>
           <div className='avatar-subcontainer'>
-            <h3>{this.state.userProfile.name}</h3>
+            <h3>{this.state.userProfile.name} {' '}
+              <Image src={process.env.PUBLIC_URL + 'edit.png'} style={{width: '20px'}}/>
+            </h3>
             <div>{this.state.userProfile.title}</div>
             <div>{this.state.userProfile.location}</div>
           </div>
@@ -94,7 +97,11 @@ class Profile extends Component {
             <Row>
               <Col className="skills" lg={8}>
                 <Row className="skills-title">
-                  <h4 style={{margin:'.5rem'}}>Skills</h4>
+                  <span style={{margin:'.5rem', fontSize:'larger', fontWeight:'900'}}>Skills</span>
+                  <div style={{display:'flex', width:'88%', justifyContent:'flex-end'}}>
+                    <Button style={{margin: '0.5rem'}} variant="success">+ Add New Skills</Button>
+                    <Button style={{margin: '0.5rem'}} variant="success">Edit Skills</Button>
+                  </div>
                 </Row>
                 <Row style={{margin:'1rem'}}>
                   <ul>
@@ -108,16 +115,19 @@ class Profile extends Component {
               </Col>
               <Col className="contact" lg={4}>
                 <Row className="contact-title">
-                  <h4 style={{margin:'.5rem'}}>Contact</h4>
+                  <span style={{margin:'.5rem', fontSize:'larger', fontWeight:'900'}}>Contact</span>
+                  <div style={{display:'flex', width:'71%', justifyContent:'flex-end'}}>
+                    <Button style={{margin: '0.5rem'}} variant="success">Edit</Button>
+                  </div>
                 </Row>
-                <Row className="contact-item">
+                <Row className="contact-item-middle">
                   <img
                     src="https://img.icons8.com/metro/52/000000/filled-message.png"
                     style={{height: '30px', width: '30px'}}
                   />
                   <div className="contact-text">{this.state.userEmail}</div>
                 </Row>
-                <Row className="contact-item">
+                <Row className="contact-item-middle">
                   <img
                     src="https://img.icons8.com/ios-filled/50/000000/phone.png"
                     style={{height: '30px', width: '30px'}}
@@ -130,6 +140,14 @@ class Profile extends Component {
                     style={{height: '30px', width: '30px'}}
                   />
                   <div className="contact-text">{this.state.userProfile.linkedIn}</div>
+                </Row>
+                <Row className="empty-row">
+                </Row>
+                <Row className="contact-title">
+                  <span style={{margin:'.5rem', fontSize:'larger', fontWeight:'900'}}>Resume</span>
+                  <div style={{display:'flex', width:'70%', justifyContent:'flex-end'}}>
+                    <Button style={{margin: '0.5rem'}} variant="success">Upload</Button>
+                  </div>
                 </Row>
               </Col>
             </Row>
