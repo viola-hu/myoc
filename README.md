@@ -13,7 +13,9 @@ Collaborating with UX designers and other developers in New Zealand team, I main
 * Bootstrap
 
 ## How it looks:
+<div style={border: 'solid 1px black'}>
 <img alt="profile page" src="./src/images/ScreenShotProfile.png" width="500px">
+<div>
 
 ## Getting Started
 ### Prerequisites
